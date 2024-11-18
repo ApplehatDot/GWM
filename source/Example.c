@@ -7,9 +7,7 @@
 #include <GL/glut.h>
 #include "GWM.h"
 
-// Those 4 Values must be given for GWM.
-#define wWidth 500.0f
-#define wHeight 500.0f
+// Those 2 Values must be given for GWM.
 #define PosX 100.0f
 #define PosY 100.0f
 
