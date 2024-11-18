@@ -16,7 +16,13 @@
 WindowPosition WP = {wWidth, wHeight, PosX, PosY};
 
 // GWM Window Size {200.0f, 100.0f}, Description character - no limit, Text Position(s) 
-GWMConfig GWM = {200.0f, 100.0f, "a quick brown fox jumps\nover the lazy dog\n\nIt works :D", PosX + 1.0f, PosY + 78.0f}; 
+GWMConfig GWM = {
+	200.0f, 
+	100.0f, 
+	"a quick brown fox jumps\nover the lazy dog\n\nIt Works :P", 
+	PosX + 1.0f, 
+	PosY + 78.0f
+}; 
 
 /* 
 You could also define the description as below:
@@ -25,10 +31,10 @@ You could also define the description as below:
  */
 
 void display(){
-	  glClearColor(0.0f/255.0f, 0.0f/255.0f, 0.0f/255.0f, 1.0f);	//Background - Black
-	  glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.0f/255.0f, 0.0f/255.0f, 0.0f/255.0f, 1.0f);	//Background - Black
+    glClear(GL_COLOR_BUFFER_BIT);
 	
-	  glMatrixMode(GL_PROJECTION);
+    glMatrixMode(GL_PROJECTION);
     glPushMatrix();
     glLoadIdentity();
     gluOrtho2D(0, wWidth, 0, wHeight);
@@ -36,11 +42,11 @@ void display(){
     glPushMatrix();
     glLoadIdentity();
 	
-	  // the Window is loaded here.
-	  MakeWindow(&GWM, &WP);
+	
+    MakeWindow(&GWM, &WP);
 	
 	
-	  glPopMatrix();
+    glPopMatrix();
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
     glMatrixMode(GL_MODELVIEW);
@@ -48,17 +54,17 @@ void display(){
 } 
 
 void reshape(int w, int h){
-	  glViewport(0, 0, (GLsizei)w, (GLsizei)h);
-	  glMatrixMode(GL_PROJECTION);
+    glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+    glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-	  gluOrtho2D(0, wWidth, 0, wHeight);
-	  glMatrixMode(GL_MODELVIEW);
+    gluOrtho2D(0, wWidth, 0, wHeight);
+    glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-	  glutReshapeWindow(wWidth, wHeight);
+    glutReshapeWindow(wWidth, wHeight);
 }
 
 int main(int argc, char** argv){
-	  glutInit(&argc, argv);
+    glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(wWidth, wHeight);
 
@@ -68,7 +74,7 @@ int main(int argc, char** argv){
     glLoadIdentity();
 
     glutDisplayFunc(display);
-  	glutReshapeFunc(reshape);
+    glutReshapeFunc(reshape);
 
     glutMainLoop();
 
