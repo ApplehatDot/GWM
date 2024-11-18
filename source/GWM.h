@@ -2,8 +2,6 @@
 #define GWM_GL_CORE_H
 
 typedef struct {
-	float WGL_X;
-	float WGL_Y;
 	float PosX;
 	float PosY;
 } WindowPosition;
