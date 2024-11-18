@@ -3,6 +3,9 @@ GWM_GL (GUI Window Manager for OpenGL) - a simple cross-platform windowing syste
 
 Confirmed working on Windows and Linux
 
+<image src="Photos/Linux.png" width=400> 
+<image src="Photos/Windows.png" width=400>
+
 Any contribution would be nice :D
 
 # Using GWM in your project
