@@ -26,6 +26,14 @@ void MakeWindow(GWMConfig* GWM, WindowPosition* WP) {
         glVertex2f(WP->PosX, WP->PosY);
         glVertex2f(WP->PosX + GWM->WinX, WP->PosY);
 
+	// crossed underline effect
+	glVertex2f(WP->PosX, WP->PosY + 10.0f);
+        glVertex2f(WP->PosX + GWM->WinX, WP->PosY + 10.0f);
+	glVertex2f(WP->PosX, WP->PosY);
+        glVertex2f(WP->PosX + GWM->WinX, WP->PosY + 10.0f);
+	glVertex2f(WP->PosX, WP->PosY + 10.0f);
+        glVertex2f(WP->PosX + GWM->WinX, WP->PosY);
+
         // right
         glVertex2f(WP->PosX + GWM->WinX, WP->PosY);
         glVertex2f(WP->PosX + GWM->WinX, WP->PosY + GWM->WinY);
